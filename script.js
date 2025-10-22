@@ -52,21 +52,21 @@ gridBtn.addEventListener("click", () => {
     }
 });
 
-redBtn.addEventListener("click", () => {
+redBtn.addEventListener("mousedown", () => {
     selectedColor = "red";
     redBtn.classList.add("current");
     greenBtn.classList.remove("current");
     blueBtn.classList.remove("current");
 });
 
-greenBtn.addEventListener("click", () => {
+greenBtn.addEventListener("mousedown", () => {
     selectedColor = "green";
     greenBtn.classList.add("current");
     blueBtn.classList.remove("current");
     redBtn.classList.remove("current");
 });
 
-blueBtn.addEventListener("click", () => {
+blueBtn.addEventListener("mousedown", () => {
     selectedColor = "blue";
     blueBtn.classList.add("current");
     greenBtn.classList.remove("current");
