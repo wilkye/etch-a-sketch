@@ -15,20 +15,23 @@ body {
     align-items: center;
 }
 
-button {
+.big {
     border: none;
+    color: white;
     border-radius: 8px;
+    box-shadow: 2px 2px black;
     padding: 12px 24px;
-    background-color: rgb(116, 230, 230);
+    background-color: gray;
     font-size: 16px;
 }
 
-button:hover {
-    background-color: rgb(99, 198, 198);
+.big:hover {
+    background-color: rgb(110, 110, 110);
 }
 
-button:active {
-    background-color: rgb(190, 190, 190);
+.big:active {
+    translate: 2px 2px;
+    box-shadow: none;
 }
 
 .buttons {
@@ -40,18 +43,71 @@ button:active {
     padding: 24px 36px;
 }
 
+.color-sect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.small {
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px black;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue:hover {
+    background-color: rgb(0, 0, 220);
+}
+
+.green:hover {
+    background-color: rgb(0, 105, 0);
+}
+
+.red:hover {
+    background-color: rgb(220, 0, 0);
+}
+
+.red:active {
+    translate: 2px 2px;
+    box-shadow: none;
+}
+
+.green:active {
+    translate: 2px 2px;
+    box-shadow: none;
+}
+
+.blue:active {
+    translate: 2px 2px;
+    box-shadow: none;
+}
+
+.current {
+    translate: 2px 2px;
+    box-shadow: none;
+}
+
 .grid-container {
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    box-shadow: 4px 4px black;
+    box-shadow: 2px 2px black;
 }
 
 .square {
-    background-color: rgb(195, 195, 195);
-    outline: 1px rgb(49, 49, 49) solid;
-}
-
-.square:hover {
-    background-color: red;
+    outline: 1px rgba(49, 49, 49, 0.309) solid;
 }

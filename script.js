@@ -1,15 +1,21 @@
 const gridCont = document.getElementById("gridCont");
 const clearBtn = document.getElementById("clear");
 const gridBtn = document.getElementById("gridSize");
+const redBtn = document.getElementById("red");
+const greenBtn = document.getElementById("green");
+const blueBtn = document.getElementById("blue");
+
+let selectedColor = "red";
 
 let createSquare = (x) => {
     const square = document.createElement("div");
 
     square.className = "square";
+    square.style.backgroundColor = "rgba(233, 233, 233, 1)";
     square.style.width = `${x}px`;
     square.style.height = `${x}px`;
     square.addEventListener("mouseenter", () => {
-        square.style.backgroundColor = "red";
+        square.style.backgroundColor = selectedColor;
     });
 
     gridCont.appendChild(square);
@@ -33,7 +39,7 @@ let makeGrid = (dimension) => {
 clearBtn.addEventListener("click", () => {
     const allSquares = document.getElementsByClassName("square");
     for (let i = 0; i < allSquares.length; i++) {
-        allSquares[i].style.backgroundColor = "rgb(195, 195, 195)";
+        allSquares[i].style.backgroundColor = "rgba(233, 233, 233, 1)";
     }
 });
 
@@ -44,6 +50,27 @@ gridBtn.addEventListener("click", () => {
     } else {
         makeGrid(Math.floor(userInput));
     }
+});
+
+redBtn.addEventListener("click", () => {
+    selectedColor = "red";
+    redBtn.classList.add("current");
+    greenBtn.classList.remove("current");
+    blueBtn.classList.remove("current");
+});
+
+greenBtn.addEventListener("click", () => {
+    selectedColor = "green";
+    greenBtn.classList.add("current");
+    blueBtn.classList.remove("current");
+    redBtn.classList.remove("current");
+});
+
+blueBtn.addEventListener("click", () => {
+    selectedColor = "blue";
+    blueBtn.classList.add("current");
+    greenBtn.classList.remove("current");
+    redBtn.classList.remove("current");
 });
 
 // Initial grid creation

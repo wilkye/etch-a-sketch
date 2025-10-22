@@ -11,9 +11,16 @@
 <body>
     <h1>Etch-a-Sketch</h1>
     <div class="buttons">
-        <button id="gridSize">Grid Size</button>
-        <button id="color">Color</button>
-        <button id="clear">Clear</button>
+        <button class="big" id="gridSize">grid size</button>
+        <div class="color-sect">
+            <p>colors</p>
+            <div class="small-btns">
+                <button class="small red" id="red"></button>
+                <button class="small green" id="green"></button>
+                <button class="small blue" id="blue"></button>
+            </div>
+        </div>
+        <button class="big" id="clear">clear</button>
     </div>
     <div class="grid-container" id="gridCont">
     </div>
